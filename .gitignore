@@ -1,0 +1,13 @@
+FileLexer.hs
+Lexer.hs
+Parser.hs
+
+FileLexer
+Lexer
+Main
+
+*.o
+*.hi
+*.info
+ShiftReduce.hs
+ReduceReduce.hs
