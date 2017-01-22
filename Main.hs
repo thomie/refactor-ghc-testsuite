@@ -27,6 +27,7 @@ deleteSetups test = test{setups = filter (not . exclude) (setups test)}
     exclude :: Expr -> Bool
     exclude (ASymbol "only_compiler_types":_) = True
     exclude (ASymbol "when" : ATuple ((ASymbol "compiler_lt":_) :_) :_) = True
+    exclude (ASymbol "clean_cmd":_) = True
     -- exclude (ASymbol "req_profiling" :_) = True
     -- exclude [ASymbol "only_ways", ATuple [[ASymbol "prof_ways"]]] = True
     -- exclude [ASymbol "extra_ways", ATuple [[AList [[AString "'prof'"]]]]] = True
